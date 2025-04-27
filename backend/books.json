@@ -35,6 +35,7 @@
       "forBook": 1,
       "title": "Very good",
       "description": "Indeed ...",
+      "author": "MK",
       "rate": 5
     },
     {
@@ -42,6 +43,7 @@
       "forBook": 1,
       "title": "Hmm",
       "description": "Okay, I had a good time, but I expected something else.",
+      "author": "MK",
       "rate": 3
     },
     {
@@ -49,7 +51,24 @@
       "forBook": 3,
       "title": "Don't like it",
       "description": "Anything is better than this.",
+      "author": "MK",
       "rate": 1
+    },
+    {
+      "title": "takie se",
+      "author": "1mkmk",
+      "content": "nawet fajen",
+      "rating": 4,
+      "forBook": 1,
+      "id": 4
+    },
+    {
+      "title": "takie se",
+      "author": "1mkmk",
+      "content": "nawet fajen",
+      "rating": 4,
+      "forBook": 1,
+      "id": 5
     }
   ]
 }

@@ -1,0 +1,18 @@
+.star-rating {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 30px;
+    color: #ccc;
+}
+
+.star.checked {
+    color: gold;
+}
+
+.star input {
+    display: none;
+}
