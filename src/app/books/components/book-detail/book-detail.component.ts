@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Book } from '../../model/book';
 import { Review } from '../../../reviews/model/review';
-import { ReviewComponent } from '../../../reviews/components/review.component';
+import { ReviewComponent } from '../../../reviews/components/review/review.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
