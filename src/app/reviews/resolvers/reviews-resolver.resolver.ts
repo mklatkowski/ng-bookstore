@@ -8,6 +8,5 @@ export const reviewsResolver: ResolveFn<Review[]> = (
   state: RouterStateSnapshot,
 ) => {
   const bookId = Number(route.paramMap.get('bookId'));
-  console.log(`Fetching reviews for book with ID: ${bookId}`);
   return inject(ReviewsService).getReviewsForBook(bookId);
 };

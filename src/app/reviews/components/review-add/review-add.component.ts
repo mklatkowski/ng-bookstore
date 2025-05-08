@@ -33,7 +33,6 @@ export class ReviewAddComponent {
     });
   }
 
-  // Zapisz nową recenzję
   onSubmit() {
     if (this.reviewForm.valid) {
       const newReview = {

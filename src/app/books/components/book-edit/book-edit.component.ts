@@ -33,7 +33,7 @@ export class BookEditComponent {
   }
 
   save(): void {
-    if (this.form.valid && this.form.dirty) {
+    if (this.form.valid) {
       const updatedBook: Book = { ...this.book, ...this.form.value };
       this.booksService.saveBook(updatedBook).subscribe(() => {
         this.router.navigate(['/books']);

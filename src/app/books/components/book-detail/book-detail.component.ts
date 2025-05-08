@@ -3,14 +3,14 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Book } from '../../model/book';
 import { Review } from '../../../reviews/model/review';
 import { ReviewComponent } from '../../../reviews/components/review.component';
-import { CommonModule } from '@angular/common';  // Dodaj CommonModule
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'bs-book-detail',
   templateUrl: './book-detail.component.html',
   styleUrls: ['./book-detail.component.scss'],
   standalone: true,
-  imports: [RouterLink, ReviewComponent, CommonModule]  // Dodaj CommonModule
+  imports: [RouterLink, ReviewComponent, CommonModule]
 })
 export class BookDetailComponent {
   readonly book: Book;
