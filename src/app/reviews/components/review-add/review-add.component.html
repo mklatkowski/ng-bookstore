@@ -1,22 +1,43 @@
-<form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="form-group">
         <label for="title">Title</label>
-        <input id="title" class="form-control" formControlName="title" />
+        <input id="title" class="form-control"
+            [ngClass]="{'is-invalid': reviewForm.get('title')?.invalid && reviewForm.get('title')?.touched}"
+            formControlName="title" />
+        <div class="invalid-feedback" *ngIf="reviewForm.get('title')?.errors && reviewForm.get('title')?.touched">
+            Title is required.
+        </div>
     </div>
 
     <div class="form-group">
         <label for="author">Author</label>
-        <input id="author" class="form-control" formControlName="author" />
+        <input id="author" class="form-control"
+            [ngClass]="{'is-invalid': reviewForm.get('author')?.invalid && reviewForm.get('author')?.touched}"
+            formControlName="author" />
+        <div class="invalid-feedback" *ngIf="reviewForm.get('author')?.errors && reviewForm.get('author')?.touched">
+            Author is required.
+        </div>
     </div>
 
     <div class="form-group">
         <label for="description">Description</label>
-        <textarea id="description" class="form-control" formControlName="description"></textarea>
+        <textarea id="description" class="form-control"
+            [ngClass]="{'is-invalid': reviewForm.get('description')?.invalid && reviewForm.get('description')?.touched}"
+            formControlName="description"></textarea>
+        <div class="invalid-feedback"
+            *ngIf="reviewForm.get('description')?.errors && reviewForm.get('description')?.touched">
+            Description is required.
+        </div>
     </div>
 
     <div class="form-group">
         <label for="rate">Rate</label>
-        <input type="number" id="rate" class="form-control" formControlName="rate" min="1" max="5" />
+        <input type="number" id="rate" class="form-control"
+            [ngClass]="{'is-invalid': reviewForm.get('rate')?.invalid && reviewForm.get('rate')?.touched}"
+            formControlName="rate" min="1" max="5" />
+        <div class="invalid-feedback" *ngIf="reviewForm.get('rate')?.errors && reviewForm.get('rate')?.touched">
+            Rate must be between 1 and 5.
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary" [disabled]="reviewForm.invalid">Save</button>
